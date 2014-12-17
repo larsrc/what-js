@@ -11,9 +11,13 @@ function(foo, bar) {
   if (bar == 0) {
     what.theFuck("I _know_ I checked for bar == 0 before calling.");
   }
+  if (foo < 0) {
+    what.isThisIDontEven("Negative foo: ", foo);
+  }
   switch (foo) {
     case 1: return 'this';
     case 2: return 'that';
     default: what.toDo("When foo is neither 1 nor 2, but ", foo);
   }
+  what.amIDoingHere("This shouldn't be reachable.");
 }
